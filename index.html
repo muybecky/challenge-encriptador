@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador de Texto</title>
+</head>
+<body>
+    <header id="header">
+        <img src="images/vector.png" alt="Logo Alura" id="header-logo">
+
+    </header>
+    <main id="main">
+        <div class="main-container">
+            <textarea pattern="[a-z]" required="true" id="encrypt" cols="30" rows="13" placeholder="Ingrese su texto aquí"></textarea>
+            <div id="container-icon">
+                <i class="bi bi-exclamation-circle-fill" id="icon-att"></i>
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="container-buttons">
+                <button id="button-encrypt" onclick="encrypt()"> <span>Encriptar</span> </button>
+                <button id="button-decrypt" onclick="decrypt()"> <span>Desencriptar</span> </button>
+            </div>
+        </div>
+        <div class="container-result">
+            <img src="images/search.svg" id="illustration" alt="">
+            <p id="result"></p>
+            <div id="hide">
+                <p id="message1">Ningún mensaje fue encontrado</p>
+                <p id="message2">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <button id="copy-button" onclick="copyToClickBoard()"><span>Copiar</span></button>
+        </div>
+    </main>
+<script src="javascript.js"></script>
+</body>
+</html>
